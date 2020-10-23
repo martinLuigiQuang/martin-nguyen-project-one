@@ -37,7 +37,7 @@ h2 {
     font-size: 30px;
     margin-top: 30px;
 }
-nav, p {
+nav a, p {
     font-size: 20px;
     line-height: 29px;
 }
@@ -69,12 +69,12 @@ header {
     background-size: cover;
 }
 nav ul {
-    padding: 20px 480px 0;
+    padding: 20px calc((100% - 380px)/2) 0;
     margin: 0;
 }
 nav li {
     display: inline-block;
-    width: 23%;
+    width: 80px;
     text-align: center;
 }
 nav li a {
@@ -85,13 +85,13 @@ nav li a:hover {
     color: #E85B26;
 }
 header .wrapper {
-    width: 1180px;
+    width: calc(100% - 100px);
     position: relative;
 }
 h1 {
     position: absolute;
     top: 150px;
-    left: 500px;
+    right: 200px;
     background-color: rgba(227, 228, 234, 0.89);
     width: 480px;
     padding-left: 20px;
@@ -103,6 +103,7 @@ header p {
     padding: 0 10px;
     background-color: #E85B26;
     transform: rotate(333deg);
+    transition: transform 1s;
 }
 .social-media {
     margin-top: 150px;
@@ -150,11 +151,11 @@ header p {
 }
 .giving-back .wrapper {
     margin: 0 auto;
-    width: 1080px;
+    width: calc(100% - 200px);
 }
-.giving-back .image img {
+.giving-back img {
     width: 300px;
-    padding: 75px 0 75px 0;
+    padding: 75px 0;
     float: left;
 }
 .giving-back .text {
@@ -224,22 +225,20 @@ header p {
     height: 600px;
 }
 .instagram .wrapper {
-    width: 1080px;
+    width: calc(100% - 200px);
     text-align: center;
     padding: 50px 0;
 }
 .instagram h2 {
     padding-bottom: 50px;
 }
-.instagram a,
-.instagram img {
-    float: left;
-    width: calc(1040px / 3);
-}
 .instagram a {
+    float: left;
     margin-right: 20px;
+    width: calc((100% - 40px) / 3);
 }
 .instagram img {
+    width: 100%;
     border: 5px solid white;
 }
 .instagram a:hover img,
@@ -257,7 +256,7 @@ footer nav {
     padding: 50px 0;
 }
 footer .wrapper {
-    width: 1080px;
+    width: calc(100% - 200px);
     padding-bottom: 50px;
 }
 .contact{
@@ -278,4 +277,55 @@ footer button {
     border: 2px solid #E85B26;
     background-color: #186684;
     color: white;
+}
+
+/* SCREEN RESIZE */
+@media (max-width: 1280px) {
+    .wrapper {
+        width: 100vw;
+    }
+    /* FONT MATTERS */
+    h2 {
+        font-size: 30px;
+    }
+    .communication h2 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 15px;
+    }
+    header p {
+        font-size: 18px;
+    }
+    a {
+        font-size: 12px;
+    }
+    footer input::placeholder {
+        font-size: 18px;
+    }
+    /* HEADER */
+    header p {
+        transform: rotate(270deg) translateX(50px);
+        transition: transform 1s;
+    }
+
+    /* ADVERTISEMENT */
+    .advertisement .text1,
+    .advertisement .text2 {
+        height: calc(50vw*3/4);
+    }
+
+    /* GIVING BACK */
+    .giving-back img {
+        width: calc(100vw * 300 / 1280);
+    }
+    .giving-back .text {
+        height: auto;
+        width: calc((100vw * 780 / 1280) - 35px);
+    }
+}
+
+/* MOBILE DEVICES */
+@media (max-width: 1080px) {
+    
 }
