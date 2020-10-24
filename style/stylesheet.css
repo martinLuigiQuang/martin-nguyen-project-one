@@ -124,15 +124,20 @@ header p {
 }
 
 /* ADVERTISEMENT */
-.advertisement .text1, .advertisement .text2, 
+.advertisement .text1, 
+.advertisement .text2, 
 .advertisement img {
     width: 50%;
     float: left;
+}
+.advertisement .image1 img {
+    float: right;
 }
 .advertisement .text1, 
 .advertisement .text2 {
     padding: 50px 100px 0;
     height: 480px;
+    float: left;
 }
 .advertisement a {
     text-decoration: none;
@@ -327,5 +332,90 @@ footer button {
 
 /* MOBILE DEVICES */
 @media (max-width: 1080px) {
-    
+    /* FONT MATTERS */
+    h1 {
+        font-size: 80px;
+    }
+    /* HEADERS */
+    header {
+        position: relative;
+        background-size: cover 200%;
+        background-position-x: -200px;
+    }
+    header nav, .social-media {
+        display: none;
+    }
+    /* HAMBURGER / BARS */
+    header .bars-container {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 70px;
+        height: 30px;
+    }
+    header .bars,
+    header .bars:before,
+    header .bars:after {
+        content: "";
+        width: 70px;
+        height: 5px;
+        background-color: #186684;
+        border-radius: 5px;
+    }
+    header .bars:before {
+        position: absolute;
+        top: 15px;
+    }
+    header .bars:after {
+        position: absolute;
+        top : 30px;
+    }
+
+    header h1 {
+        bottom: 280px;
+        right: -10px;
+        width: 440px;
+    }
+    header p {
+        bottom: -450px;
+        right: -65px;
+    }
+
+    /* ADVERTISEMENT */
+    .advertisement .text1, 
+    .advertisement .text2, 
+    .advertisement img {
+       width: 100%;
+       height: auto;
+    }
+    .advertisement .text1, 
+    .advertisement .text2 {
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+
+    /* GIVING BACK */
+    .giving-back {
+        height: auto;
+    }
+    .giving-back .wrapper {
+        width: 100%;
+    }
+    .giving-back .image {
+        width: calc(100% - 50px);
+        padding: 0;
+        margin: 0 auto;
+    }
+    .giving-back img {
+        width: 100%;
+    }
+    .giving-back .text {
+        width: 100%;
+        height: auto;
+    }
+
+    /* COMMUNICATION */
+    .communication .wrapper {
+        width: calc(100% - 50px);
+    }
 }
