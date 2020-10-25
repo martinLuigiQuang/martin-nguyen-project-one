@@ -23,7 +23,7 @@ h1, h2, nav, a, footer button {
     font-family: 'Nova Flat', cursive;
     color: #186684;
 }
-p, .communication h2, footer input::placeholder {
+p, .communication h2, footer input::placeholder, .copyright p {
     font-family: 'Catamaran', sans-serif;
 }
 h1 {
@@ -61,6 +61,10 @@ footer input::placeholder {
     font-size: 18px;
     color: #186684;
 }
+.copyright p {
+    font-size: 18px;
+    color: #F4F4F4;
+}
 
 /* HEADER */
 header {
@@ -83,6 +87,9 @@ nav li a {
 nav li a:focus, 
 nav li a:hover {
     color: #E85B26;
+}
+.bars-container input {
+    display: none;
 }
 header .wrapper {
     width: calc(100% - 100px);
@@ -250,7 +257,7 @@ header p {
 .instagram a:focus img {
     border: 5px solid #E85B26;
 }
-.instagram a:nth-child(4) {
+.instagram .image a:nth-child(3) {
     margin: 0;
 }
 /* FOOTER */
@@ -259,6 +266,9 @@ footer {
 }
 footer nav {
     padding: 50px 0;
+}
+footer ul {
+    padding-top: 0;
 }
 footer .wrapper {
     width: calc(100% - 200px);
@@ -270,18 +280,27 @@ footer .wrapper {
 .update {
     float: right;
 }
-footer input {
+.update input {
     float: left;
     width: 400px;
     padding: 10px;
     border: 2px solid white;
 }
-footer button {
+.update button {
     float: left;
     padding: 10px 15px;
     border: 2px solid #E85B26;
     background-color: #186684;
     color: white;
+}
+.copyright {
+    width: 100%;
+    background-color: #1F2022;
+}
+.copyright p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
 }
 
 /* SCREEN RESIZE */
@@ -305,7 +324,7 @@ footer button {
     a {
         font-size: 12px;
     }
-    footer input::placeholder {
+    .update input::placeholder {
         font-size: 18px;
     }
     /* HEADER */
@@ -345,32 +364,33 @@ footer button {
     header nav, .social-media {
         display: none;
     }
-    /* HAMBURGER / BARS */
-    header .bars-container {
+    /*------------ HAMBURGER ------------*/
+    .bars-container {
         position: absolute;
         top: 50px;
         right: 50px;
         width: 70px;
         height: 30px;
     }
-    header .bars,
-    header .bars:before,
-    header .bars:after {
+    .bars,
+    .bars:before,
+    .bars:after {
         content: "";
         width: 70px;
         height: 5px;
         background-color: #186684;
         border-radius: 5px;
     }
-    header .bars:before {
+    .bars:before {
         position: absolute;
         top: 15px;
     }
-    header .bars:after {
+    .bars:after {
         position: absolute;
         top : 30px;
     }
-
+    .bars:c
+    /*-----------------------------------*/
     header h1 {
         bottom: 280px;
         right: -10px;
@@ -397,25 +417,81 @@ footer button {
     /* GIVING BACK */
     .giving-back {
         height: auto;
+        padding: 100px 0;
     }
     .giving-back .wrapper {
         width: 100%;
     }
-    .giving-back .image {
+    .giving-back .image,
+    .giving-back img {
         width: calc(100% - 50px);
-        padding: 0;
+        padding-top: 0;
+        padding-bottom: 25px;
         margin: 0 auto;
     }
     .giving-back img {
         width: 100%;
     }
     .giving-back .text {
+        padding: 0 25px;
         width: 100%;
         height: auto;
     }
 
     /* COMMUNICATION */
+    .communication {
+        height: auto;
+    }
     .communication .wrapper {
+        width: 200px;
+        padding: 25px;
+        margin: 0 auto;
+        height: 425px;
+    }
+    
+    /* INSTAGRAM */
+    .instagram {
+        height: auto;
+    }
+    .instagram .wrapper {
         width: calc(100% - 50px);
+    }
+    .instagram a {
+        width: calc((100% - 20px) / 2);
+    }
+    .instagram .image a:nth-child(2) {
+        margin: 0;
+    }
+    .instagram .image a:last-child {
+        display: none;
+    }
+
+    /* FOOTER */
+    footer ul {
+        padding: 0 25px;
+    }
+    footer ul li {
+        width: calc((100% - 50px) / 4);
+    }
+    footer .wrapper {
+        width: calc(100% - 50px);
+    }
+    .contact { 
+        text-align: center;
+        float: none;
+        padding-bottom: 50px;
+    }
+    .update {
+        text-align: center;
+        float: none;
+    }
+    .update input {
+        width: 100%;
+    }
+    .update input::placeholder {
+        text-align: center;
+    }
+    .update button {
+        width: 100%;
     }
 }
