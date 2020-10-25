@@ -88,8 +88,14 @@ nav li a:focus,
 nav li a:hover {
     color: #E85B26;
 }
-.bars-container input {
-    display: none;
+input#menu {
+    display: block;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
 }
 header .wrapper {
     width: calc(100% - 100px);
@@ -362,34 +368,32 @@ footer .wrapper {
         background-position-x: -200px;
     }
     header nav, .social-media {
-        display: none;
+        height: 0;
+        overflow: hidden;
     }
     /*------------ HAMBURGER ------------*/
-    .bars-container {
-        position: absolute;
-        top: 50px;
-        right: 50px;
-        width: 70px;
-        height: 30px;
-    }
     .bars,
     .bars:before,
     .bars:after {
+        position: absolute;
         content: "";
         width: 70px;
         height: 5px;
         background-color: #186684;
         border-radius: 5px;
     }
+    .bars {
+        top: 15px;
+    }
     .bars:before {
-        position: absolute;
         top: 15px;
     }
     .bars:after {
-        position: absolute;
         top : 30px;
     }
-    .bars:c
+    #menu:checked ~ nav {
+        overflow: visible;
+    }
     /*-----------------------------------*/
     header h1 {
         bottom: 280px;
