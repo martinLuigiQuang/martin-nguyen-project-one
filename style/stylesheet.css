@@ -311,6 +311,7 @@ footer .wrapper {
     height: 40px;
     padding: 10px;
     border: 2px solid white;
+    font-size: 16px;
 }
 .update button {
     float: left;
